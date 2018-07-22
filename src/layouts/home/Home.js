@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+// import AttestButton from './../../user/ui/attestbutton/AttestButton'
 
 class Home extends Component {
   render() {

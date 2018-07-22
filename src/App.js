@@ -5,6 +5,7 @@ import { HiddenOnlyAuth, VisibleOnlyAuth } from './util/wrappers.js'
 // UI Components
 import LoginButtonContainer from './user/ui/loginbutton/LoginButtonContainer'
 import LogoutButtonContainer from './user/ui/logoutbutton/LogoutButtonContainer'
+// import AttestButtonContainer from './user/ui/attestbutton/AttestButton'
 
 // Styles
 import './css/oswald.css'
@@ -22,6 +23,9 @@ class App extends Component {
         <li className="pure-menu-item">
           <Link to="/profile" className="pure-menu-link">Profile</Link>
         </li>
+        <li className="pure-menu-item">
+          <Link to="/verification" className="pure-menu-link">Verification</Link>
+        </li>
         <LogoutButtonContainer />
       </span>
     )
@@ -30,6 +34,9 @@ class App extends Component {
       <span>
         <LoginButtonContainer />
       </span>
+      // <span>
+      //   <AttestButtonContainer />
+      // </span>
     )
 
     return (

@@ -20,5 +20,4 @@ const LoginButtonContainer = connect(
   mapStateToProps,
   mapDispatchToProps
 )(LoginButton)
-
 export default LoginButtonContainer
