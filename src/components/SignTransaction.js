@@ -42,7 +42,7 @@ class SignTransaction extends Component {
           sub: this.props.authData.address,
           claim: {
             "Event": "Verification is succeeded",
-            "Date": d.getTime() + ": " + month[d.getMonth()] + " " + d.getDate() + "," + d.getFullYear(),
+            "Date/Time": month[d.getMonth()] + " " + d.getDate() + "," + d.getFullYear() + " / " + d.getHours() + ":" + d.getMinutes(),
             "MNID": this.props.authData.address,
             "txHash":"https://rinkeby.etherscan.io/tx/" + txHash 
           },
