@@ -1,9 +1,9 @@
 import { Connect, SimpleSigner } from 'uport-connect'
 
 export let uport = new Connect('TEST', {
-  clientId: '2orTEYdGJcwnuaPU1B6SekGwTdU97aoqoM3',
+  clientId: '2ojeBcnNeuu31wxRV42yHB4CGpZT4nU5C76',
   network: 'rinkeby',
-  signer: SimpleSigner('131c6f4aa076feda9f01c994210b4ba53401e55e3ecd93e5d91c817059fcf655')
+  signer: SimpleSigner('84a9dbbf744cd9d51e7dcd92f39ba6de5e9343119f93c8273aab526a24c18ed7')
 })
 
 export const web3 = uport.getWeb3()

@@ -1,10 +1,6 @@
 var SimpleStorage = artifacts.require("./SimpleStorage.sol");
-var Verify = artifacts.require("./Verify.sol");
+var Verify = artifacts.require("Verifies");
 
-// module.exports = function(deployer) {
-//   deployer.deploy(SimpleStorage);
-//   deployer.deploy(Verify);
-// };
 module.exports = function(deployer) {
   deployer.deploy(SimpleStorage);
    deployTestCrowdsale(deployer);

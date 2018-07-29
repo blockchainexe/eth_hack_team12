@@ -41,10 +41,11 @@ class SignTransaction extends Component {
         uport.attestCredentials({
           sub: this.props.authData.address,
           claim: {
-            "Event": "Verification is succeeded",
-            "Date/Time": month[d.getMonth()] + " " + d.getDate() + "," + d.getFullYear() + " / " + d.getHours() + ":" + d.getMinutes(),
-            "MNID": this.props.authData.address,
-            "txHash":"https://rinkeby.etherscan.io/tx/" + txHash 
+            "Event": {
+                "Date": month[d.getMonth()] + " " + d.getDate() + "," + d.getFullYear() + " / " + d.getHours() + ":" + d.getMinutes(),
+                "MNID": this.props.authData.address,
+                "txHash":"https://rinkeby.etherscan.io/tx/" + txHash 
+            }
           },
           exp: d.getTime() + 30 * 24 * 60 * 60 * 1000,  // 30 days from now
         })
@@ -54,9 +55,17 @@ class SignTransaction extends Component {
 
   render () {
     return (
-      <section>
-        <h4>Sign a transaction</h4>
-        <p>予約する</p>
+      <main className="container">
+        <div className="pure-g">
+          <div className="pure-u-1-1">
+            <h1>Reservation</h1>
+            <strong>Name: </strong>
+            {this.props.authData.name}<br />
+            <strong>E-mail: </strong>
+            {this.props.authData.email}<br />
+            <strong>Evaluation: </strong>
+            {this.props.authData.Reputation.Acceptable}/{this.props.authData.Reputation.Reviewer}<br />
+            <br />
         <div>
           {
               <form>
@@ -69,7 +78,9 @@ class SignTransaction extends Component {
               </form>
           }
         </div>
-      </section>
+          </div>
+        </div>
+      </main>
     )
   }
 }
